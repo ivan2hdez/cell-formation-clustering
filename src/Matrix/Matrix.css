@@ -1,0 +1,12 @@
+.matrix {
+  padding: 20px 0;
+}
+
+table {
+  border: 2px solid darkcyan;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}

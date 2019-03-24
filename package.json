@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-number-format": "^4.0.7",
+    "react-scripts": "2.1.8",
+    "reactstrap": "^7.1.0",
+    "set-clustering": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
