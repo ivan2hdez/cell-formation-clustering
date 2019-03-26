@@ -1,0 +1,23 @@
+.clusters {
+  padding: 25px 0;
+}
+
+.cluster {
+  padding: 15px 0;
+}
+
+.groups .group:not(:first-child) {
+  border-left: none;
+}
+
+.group {
+  display: flex;
+  border: 2px solid #272b33;
+  height: 45px;
+  font-size: 24px;
+}
+
+.machine {
+  align-self: center;
+  width: 100%;
+}

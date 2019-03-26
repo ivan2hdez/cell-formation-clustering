@@ -1,5 +1,5 @@
 .matrix {
-  padding: 20px 0;
+  padding: 25px 0;
 }
 
 table {
@@ -9,4 +9,12 @@ table {
 .row {
   display: flex;
   align-items: center;
+}
+
+th {
+  border: none;
+}
+
+td {
+  border: 1px solid #dee2e6;
 }

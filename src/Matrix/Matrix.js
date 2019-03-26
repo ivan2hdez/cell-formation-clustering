@@ -41,7 +41,9 @@ class Matrix extends Component {
           </Col>
         </Row>
         <Row>
-          <Button onClick={this.props.getClusters}>Get clusters</Button>
+          <Col>
+            <Button onClick={this.props.getClusters}>Get clusters</Button>
+          </Col>
         </Row>
       </Container>
     );
