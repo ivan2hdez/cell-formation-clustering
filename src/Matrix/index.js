@@ -25,12 +25,16 @@ class Matrix extends Component {
                 {matrix.map((row, mIndex) => (
                   <tr key={`machine-${row.machine}`}>
                     <th scope="row">{row.machine}</th>
-                    {row.parts.map((_part, pIndex) => (
+                    {row.parts.map((part, pIndex) => (
                       <td key={`machine-${row.machine}-part-${pIndex+1}`}>
                         <FormGroup check>
-                          <Input type="checkbox" onChange={event => {
-                            this.props.onChangeMachinePart(mIndex, pIndex, event.target.checked);
-                          }} />
+                          <Input
+                            type="checkbox"
+                            checked={!!part}
+                            onChange={event => {
+                              this.props.onChangeMachinePart(mIndex, pIndex, event.target.checked);
+                            }}
+                          />
                         </FormGroup>
                       </td>
                     ))}
@@ -42,7 +46,17 @@ class Matrix extends Component {
         </Row>
         <Row>
           <Col>
-            <Button onClick={this.props.getClusters}>Get clusters</Button>
+            <Button
+              color="warning"
+              onClick={this.props.cleanTable}>
+                Clean table
+            </Button>
+          </Col>
+          <Col>
+            <Button
+              onClick={this.props.getClusters}>
+                Get clusters
+            </Button>
           </Col>
         </Row>
       </Container>
@@ -61,6 +75,7 @@ Matrix.propTypes = {
   matrix: PropTypes.array,
   onChangeMachinePart: PropTypes.func,
   getClusters: PropTypes.func,
+  cleanTable: PropTypes.func,
 };
 
 export default Matrix;

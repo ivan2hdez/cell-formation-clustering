@@ -1,9 +1,10 @@
 .matrix {
   padding: 25px 0;
+  overflow-x: scroll;
 }
 
 table {
-  border: 2px solid darkcyan;
+  border: 2px solid #272c34;
 }
 
 .row {

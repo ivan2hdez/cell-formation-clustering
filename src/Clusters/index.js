@@ -10,16 +10,24 @@ class Clusters extends Component {
     const { clusters } = this.props;
     return !!clusters.length && (
       <Container className="clusters">
-        {clusters.map(singleCluster => (
-          <div className="cluster">
+        {clusters.map((singleCluster, cIndex) => (
+          <div
+            className="cluster"
+            key={`cluster-${cIndex}`}
+          >
             <h2>
               {`${singleCluster.length} cluster${singleCluster.length === 1 ? '' : 's'}:`}
             </h2>
             <Row className="groups">
-              {singleCluster.map(group => (
-                <Col className="group">
+              {singleCluster.map((group, gIndex) => (
+                <Col key={`group-${gIndex}`} className="group">
                   {group.map(machine => (
-                    <span className="machine">{machine.machine}</span>
+                    <span
+                      key={`cluster-machine-${machine.machine}`}
+                      className="machine"
+                    >
+                        {machine.machine}
+                    </span>
                   ))}
                 </Col>
               ))}
