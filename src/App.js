@@ -77,7 +77,7 @@ class App extends Component {
 
   handleOnChange = async (event, key) => {
     const { value } = event.target;
-    await this.setState({[key]: parseInt(value)});
+    await this.setState({[key]: Math.abs(parseInt(value))});
     this.cleanMatrix();
   };
 
